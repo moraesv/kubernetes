@@ -8,10 +8,10 @@ spec:
       port: 5672
       targetPort: 5672
       name: amqp
-      nodePort: 35672
+      nodePort: 30672
     - protocol: TCP
       port: 15672
       targetPort: 15672
       name: management
-      nodePort: 35673
+      nodePort: 30673
   type: NodePort
