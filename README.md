@@ -81,3 +81,7 @@ CleanUp. Excluir o cluster
 `bash
     kind delete cluster
     `
+
+kubectl port-forward -n argocd service/argocd-server 8443:443
+kubectl port-forward "service/rabbitmq" 15672
+kubectl port-forward "service/rabbitmq" 5672
