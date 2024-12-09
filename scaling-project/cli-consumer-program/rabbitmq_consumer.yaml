@@ -4,7 +4,7 @@ metadata:
   name: rabbitmq-credentials
 type: Opaque
 data:
-  address: "YW1xcDovL2d1ZXN0Omd1ZXN0QHJhYmJpdG1xLmRlZmF1bHQ6NTY3Mi8K"
+  address: "YW1xcDovL2d1ZXN0Omd1ZXN0QHJhYmJpdG1xLmRlZmF1bHQ6NTY3Mgo="
 ---
 apiVersion: v1
 kind: ConfigMap
