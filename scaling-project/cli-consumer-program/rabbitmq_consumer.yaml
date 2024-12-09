@@ -4,7 +4,7 @@ metadata:
   name: rabbitmq-credentials
 type: Opaque
 data:
-  address: "YW1xcDovL2d1ZXN0Omd1ZXN0QHJhYmJpdG1xOjU2NzIK"
+  address: "YW1xcDovL2d1ZXN0Omd1ZXN0QHJhYmJpdG1xLmRlZmF1bHQ6NTY3Mi8K"
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -71,7 +71,10 @@ spec:
               mountPath: /scripts
           env:
             - name: RABBITMQ_URL
-              value: "amqp://guest:guest@rabbitmq:5672/"
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-credentials
+                  key: address
       volumes:
         - name: script-volume
           configMap:
